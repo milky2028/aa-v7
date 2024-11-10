@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /tours/{tourForm} {
+      allow read: if false;
+      allow write;
+    }
+
+    match /contactForms/{contactForm} {
+      allow read: if false;
+      allow write;
+    }
+  }
+}
